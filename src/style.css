@@ -1,0 +1,68 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #39364b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+/* ------------ Nav ------------ */
+nav {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 256px;
+    transition: all .2s ease;
+}
+
+/* ------------ main ------------ */
+body > main {
+    position: fixed;
+    left: 256px;
+    width: calc(100% - 256px);
+    transition: all .2s ease;
+
+    & header {
+        background-color: blue;
+        display: flex;
+        padding: 6px 12px;
+        align-items: center;
+        text-align: center;
+        gap: 21px;
+
+        > div {
+            background-color: yellow;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    & main {
+        background-color: #39364b;
+        height: 100vh;
+
+        & p {
+            padding-top: 21px;
+            text-align: center;
+        }
+    }
+}
+
+.main-close-nav {
+    left: 64px;
+    width: 100%;
+}
+
+.nav-close-nav {
+    width: 64px;
+}
